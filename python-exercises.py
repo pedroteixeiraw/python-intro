@@ -112,3 +112,64 @@ def sum_double(a, b):
    if a == b:
       sum = sum * 2
    return sum
+
+"""
+[9] Pos neg
+Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.
+
+pos_neg(1, -1, False) → True
+pos_neg(-1, 1, False) → True
+pos_neg(-4, -5, True) → True
+"""
+def pos_neg(a, b, negative):
+  if negative:
+    return (a < 0 and b < 0)
+  else:
+    return (a * b < 0)
+
+"""
+[10] Not String
+Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
+
+not_string('candy') → 'not candy'
+not_string('x') → 'not x'
+not_string('not bad') → 'not bad'
+"""
+def not_string(str):
+   if len(str) >= 3 and str[0:3] == 'not':
+      return str
+   else:
+      return 'not' + str
+   
+"""
+[11] Front back
+Given a string, return a new string where the first and last chars have been exchanged.
+
+front_back('code') → 'eodc'
+front_back('a') → 'a'
+front_back('ab') → 'ba'
+"""
+def front_back(str):
+  if len(str) <= 1:
+    return str
+  else:
+    return str[-1] + str[1:-1] + str[0]
+  
+"""
+[12] Front 3
+Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+front3('Java') → 'JavJavJav'
+front3('Chocolate') → 'ChoChoCho'
+front3('abc') → 'abcabcabc'
+"""
+def front3(str):
+   if len(str) <= 2:
+      return str + str + str
+   else:
+      return str[0:3] + str[0:3] + str[0:3]
+   
+# or, since the slice is silent about out-of-bounds conditions.
+
+def front3(str):
+   return str[:3] + str[:3] + str[:3]
