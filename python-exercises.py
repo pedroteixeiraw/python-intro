@@ -235,7 +235,6 @@ def string_splosion(str):
 
 """
 [5] Last 2
-
 Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
 
 last2('hixxhi') → 1
@@ -253,3 +252,21 @@ def last2(str):
       count += 1
   
   return count
+
+
+"""
+[6] Array Count 9
+Given an array of ints, return the number of 9's in the array.
+
+array_count9([1, 2, 9]) → 1
+array_count9([1, 9, 9]) → 2
+array_count9([1, 9, 9, 3, 9]) → 3
+"""
+def array_count9(nums):
+  count = 0
+  for i in range (len(nums)):
+    if nums[i] == 9:
+      count += 1
+  return count
+
+ 
