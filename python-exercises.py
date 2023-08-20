@@ -217,3 +217,18 @@ def string_bits(str):
     if i % 2 == 0:
       result = result + str[i]
   return(result)
+
+
+"""
+[4] String Splosion
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+"""
+def string_splosion(str):
+  result = ''
+  for i in range(len(str)+1):
+    result = result + str[:i]
+  return result
