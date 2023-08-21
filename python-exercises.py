@@ -380,3 +380,19 @@ extra_end('Hi') → 'HiHiHi'
 def extra_end(str):
   last_2 = str[-2:]
   return(last_2+last_2+last_2)
+
+"""
+[6] First two
+Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "".
+
+first_two('Hello') → 'He'
+first_two('abcdefg') → 'ab'
+first_two('ab') → 'ab'
+"""
+def first_two(str):
+  if len(str) == 0:
+    return("")
+  elif len(str)==1:
+    return(str[0])
+  else:
+    return(str[:2])
