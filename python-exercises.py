@@ -334,3 +334,14 @@ hello_name('X') → 'Hello X!'
 """
 def hello_name(name):
     return("Hello " + name + "!")
+
+"""
+[2] Make Abba
+Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+
+make_abba('Hi', 'Bye') → 'HiByeByeHi'
+make_abba('Yo', 'Alice') → 'YoAliceAliceYo'
+make_abba('What', 'Up') → 'WhatUpUpWhat'
+"""
+def make_abba(a, b):
+    return(a + b + b + a)
