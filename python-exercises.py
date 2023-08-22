@@ -469,3 +469,34 @@ first_last6([13, 6, 1, 2, 3]) → False
 """
 def first_last6(nums):
   return nums[0] == 6 or nums[-1] == 6
+
+"""
+[2] Same first last
+Given an array of ints, return True if the array is length 1 or more, and the first element and the last element are equal.
+
+same_first_last([1, 2, 3]) → False
+same_first_last([1, 2, 3, 1]) → True
+same_first_last([1, 2, 1]) → True
+"""
+def same_first_last(nums):
+  return len(nums) >= 1 and nums[0] == nums[-1]
+
+"""
+[3] Make pi
+Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
+
+make_pi() → [3, 1, 4]
+"""
+def make_pi():
+  return [3,1,4]
+
+"""
+[4] Common end 
+Given 2 arrays of ints, a and b, return True if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
+
+common_end([1, 2, 3], [7, 3]) → True
+common_end([1, 2, 3], [7, 3, 2]) → False
+common_end([1, 2, 3], [1, 3]) → True
+"""
+def common_end(a, b):
+  return a[0] == b[0] or a[-1] == b[-1]
