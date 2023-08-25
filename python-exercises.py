@@ -760,3 +760,25 @@ def make_bricks(small, big, goal):
     
     # Check if the remaining inches can be covered using the available small bricks
     return remaining_inches <= small
+
+"""
+[2] Lone sum
+We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each). Return the number of small bars to use, assuming we always use big bars before small bars. Return -1 if it can't be done.
+
+make_chocolate(4, 1, 9) → 4
+make_chocolate(4, 1, 10) → -1
+make_chocolate(4, 1, 7) → 2
+"""
+def lone_sum(a, b, c):
+  if a == b  and a == c:
+    return 0
+  elif a == b:
+    return c
+  elif a == c:
+    return b
+  elif b == c:
+    return a
+  else:
+    return a + b + c
+
+"""
