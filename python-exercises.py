@@ -847,3 +847,23 @@ close_far(4, 1, 3) → True
 """
 def close_far(a, b, c):
   return (abs(b-a) <= 1 and abs(c-a) >= 2 and abs(c-b)>= 2) or (abs(c-a) <= 1 and abs(b-a) >= 2 and abs(b-c) >= 2) 
+
+"""
+[7] Make Chocolate
+We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each). Return the number of small bars to use, assuming we always use big bars before small bars. Return -1 if it can't be done.
+
+make_chocolate(4, 1, 9) → 4
+make_chocolate(4, 1, 10) → -1
+make_chocolate(4, 1, 7) → 2
+"""
+def make_chocolate(small, big, goal):
+  num_big = int(goal / 5)
+  if num_big <= big:
+    goal = goal - num_big * 5
+  else:
+    goal = goal - big * 5
+  
+  if goal <= small:
+    return goal
+  else:
+    return -1
