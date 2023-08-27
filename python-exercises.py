@@ -867,3 +867,18 @@ def make_chocolate(small, big, goal):
     return goal
   else:
     return -1
+
+#String 2
+"""
+[1] Double Char
+Given a string, return a string where for every char in the original, there are two chars.
+
+double_char('The') → 'TThhee'
+double_char('AAbb') → 'AAAAbbbb'
+double_char('Hi-There') → 'HHii--TThheerree'
+"""
+def double_char(str):
+  result = ''
+  for i in str:
+    result = result + i + i
+  return result
