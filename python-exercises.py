@@ -982,3 +982,31 @@ def count_evens(nums):
     if nums[i] % 2 == 0:
       count += 1
   return count
+
+"""
+[2] Big diff
+Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. Note: the built-in min(v1, v2) and max(v1, v2) functions return the smaller or larger of two values.
+
+big_diff([10, 3, 5, 6]) → 7
+big_diff([7, 2, 10, 9]) → 8
+big_diff([2, 10, 7, 2]) → 8
+"""
+def big_diff(nums):
+  max_num = nums[-1]
+  min_num = nums[-1]
+  for i in range(len(nums)-1):
+    max_num = max(nums[i], max_num)
+    min_num = min(nums[i], min_num)
+  return max_num - min_num
+  
+def min(v1, v2):
+  if v1 > v2:
+    return v2
+  else:
+    return v1
+
+def max(v1, v2):
+  if v1 > v2:
+    return v1
+  else:
+    return v2
