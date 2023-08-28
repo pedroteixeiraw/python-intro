@@ -966,3 +966,19 @@ def xyz_there(str):
     if (str[i-1] != '.' or i == 0) and str[i:i+3] == 'xyz':
       return True
   return False
+
+#List 2
+"""
+[1] Count evens
+Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+
+count_evens([2, 1, 2, 3, 4]) → 3
+count_evens([2, 2, 0]) → 3
+count_evens([1, 3, 5]) → 0
+"""
+def count_evens(nums):
+  count = 0
+  for i in range(len(nums)):
+    if nums[i] % 2 == 0:
+      count += 1
+  return count
