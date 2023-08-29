@@ -1076,6 +1076,7 @@ def sum67(nums):
       flag = 0
     elif nums[i] == 7:
       flag = 1
-    if flag and (nums[i] == 6 or nums[i] == 7):
+    elif flag:
       sum += nums[i]
   return sum
+
