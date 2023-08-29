@@ -1072,11 +1072,12 @@ def sum67(nums):
   flag = 1
   sum = 0
   for i in range(len(nums)):
-    if nums[i] == 6:
+    if flag and nums[i] != 6:
+      sum += nums[i]
+    elif flag and nums[i] == 7:
+      sum += nums[i]
+    elif nums[i] == 6:
       flag = 0
     elif nums[i] == 7:
       flag = 1
-    elif flag:
-      sum += nums[i]
   return sum
-
