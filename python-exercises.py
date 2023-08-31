@@ -16,7 +16,6 @@ def spleep_in(weekday, vacation):
 def spleep_in2(weekday,vacation):
     return(not weekday or vacation)
 
-
 """
 [2] Diff21
 
@@ -98,7 +97,6 @@ makes10(1, 9) → True
 def makes10(a, b):
    return (a == 10 or b == 10 or a + b == 10)
 
-
 """"
 [8] Sum Double
 Given two int values, return their sum. Unless the two values are the same, then return double their sum.
@@ -170,7 +168,6 @@ def front3(str):
       return str[0:3] + str[0:3] + str[0:3]
    
 # or, since the slice is silent about out-of-bounds conditions.
-
 def front3(str):
    return str[:3] + str[:3] + str[:3]
 
@@ -218,7 +215,6 @@ def string_bits(str):
       result = result + str[i]
   return(result)
 
-
 """
 [4] String Splosion
 Given a non-empty string like "Code" return a string like "CCoCodCode".
@@ -244,15 +240,12 @@ last2('axxxaaxx') → 2
 def last2(str):
   if len(str) < 2:
     return 0
-  
   last2 = str[-2:]
   count = 0
   for i in range(len(str) - 2):
     if str[i:i+2] == last2:
       count += 1
-  
   return count
-
 
 """
 [6] Array Count 9
@@ -269,7 +262,6 @@ def array_count9(nums):
       count += 1
   return count
 
- 
 """
 [7] Array Font 9
 Given an array of ints, return True if one of the first 4 elements in the array is a 9. The array length may be less than 4.
@@ -320,7 +312,6 @@ def string_match(a, b):
     b_sub = b[i:i+2]
     if a_sub == b_sub:
       count += 1
-  
   return count
 
 #String 1
@@ -356,7 +347,6 @@ make_tags('cite', 'Yay') → '<cite>Yay</cite>'
 """
 def make_tags(tag, word):
   return('<'+tag+'>'+word+'</'+tag+'>')
-
 
 """
 [4] Make out word
@@ -419,7 +409,6 @@ without_end('coding') → 'odin'
 """
 def without_end(str):
   return(str[1:-1])
-
 
 """
 [9] Combo String
@@ -876,7 +865,6 @@ def make_chocolate(small, big, goal):
     goal = goal - num_big * 5
   else:
     goal = goal - big * 5
-  
   if goal <= small:
     return goal
   else:
@@ -912,7 +900,6 @@ def count_hi(str):
       count += 1
   return count
 
-
 """
 [3] Cat Dog
 Return True if the string "cat" and "dog" appear the same number of times in the given string.
@@ -930,7 +917,6 @@ def cat_dog(str):
     elif str[i:i+3] == 'dog':
       count_dog += 1
   return count_cat == count_dog
-
 
 """
 [4] Count code
