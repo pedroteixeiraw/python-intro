@@ -1011,7 +1011,6 @@ def max(v1, v2):
   else:
     return v2
 
-#Improve!
 """ 
 [3] Centered average
 
@@ -1021,29 +1020,7 @@ centered_average([1, 2, 3, 4, 100]) → 3
 centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
 centered_average([-10, -4, -2, -4, -2, 0]) → -3
 """
-def centered_average(nums):
-  (max_num, min_num) = maxmin(nums)
-  for i in range(len(nums)):
-  
-def maxmin(nums):
-  max_num = nums[-1]
-  min_num = nums[-1]
-  for i in range(len(nums)-1):
-    max_num = max(nums[i], max_num)
-    min_num = min(nums[i], min_num)
-  return (max_num, min_num)
-  
-def min(v1, v2):
-  if v1 > v2:
-    return v2
-  else:
-    return v1
 
-def max(v1, v2):
-  if v1 > v2:
-    return v1
-  else:
-    return v2
 
 """
 [4] Sum 13
