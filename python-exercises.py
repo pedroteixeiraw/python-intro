@@ -751,15 +751,7 @@ make_bricks(3, 1, 8) → True
 make_bricks(3, 1, 9) → False
 make_bricks(3, 2, 10) → True
 """
-def make_bricks(small, big, goal):
-    # Calculate the maximum number of inches that can be covered using the big bricks
-    max_big_bricks = big * 5
-    
-    # Calculate the remaining inches to be covered using the small bricks
-    remaining_inches = goal - min(max_big_bricks, goal)
-    
-    # Check if the remaining inches can be covered using the available small bricks
-    return remaining_inches <= small
+
 
 """
 [2] Lone sum
@@ -1013,7 +1005,6 @@ def max(v1, v2):
 
 """ 
 [3] Centered average
-
 Return the "centered" average of an array of ints, which we'll say is the mean average of the values, except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest value, ignore just one copy, and likewise for the largest value. Use int division to produce the final average. You may assume that the array is length 3 or more.
 
 centered_average([1, 2, 3, 4, 100]) → 3
@@ -1023,11 +1014,10 @@ centered_average([-10, -4, -2, -4, -2, 0]) → -3
 def centered_average(nums):
   max_nums = nums[-1]
   min_nums = nums[-1]
-  
   for i in range(len(nums)-1):
     max_nums = max(max_nums, nums[i])
     min_nums = min(min_nums, nums[i])
-  
+      
   nums.remove(min_nums)
   nums.remove(max_nums)
   c_avg = sum(nums)/len(nums)
