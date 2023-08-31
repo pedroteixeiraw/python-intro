@@ -1020,7 +1020,19 @@ centered_average([1, 2, 3, 4, 100]) → 3
 centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
 centered_average([-10, -4, -2, -4, -2, 0]) → -3
 """
-
+def centered_average(nums):
+  max_nums = nums[-1]
+  min_nums = nums[-1]
+  
+  for i in range(len(nums)-1):
+    max_nums = max(max_nums, nums[i])
+    min_nums = min(min_nums, nums[i])
+  
+  nums.remove(min_nums)
+  nums.remove(max_nums)
+  c_avg = sum(nums)/len(nums)
+  
+  return(c_avg)
 
 """
 [4] Sum 13
